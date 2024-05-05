@@ -24,6 +24,10 @@ The project allows users to register with their username, password, and phone nu
 - Download all the files in one folder it must include `extra.h`, `main.c`, `users.txt`, `user.c`, `login.c`, `admin.c` file.
 - Run `gcc main.c -o main` or Build `main.c` file.
 - Run `./main` or execute `main.c` file.
+- `admin-interface` access is hardcoded and its credentials are:
+    - Username: `Abhishek`
+    - Password: `pass`
+  
 
 ## Additional Info:
 - Previously, when the project was presented in-front of our respected teacher there was a big loophole with the project i.e on exiting the program with `CTRL + C` all of the changed data would be flushed except for users data which was actually saved with file handeling.
