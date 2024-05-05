@@ -89,7 +89,6 @@ int main()
         return 1;
     }
     movies_count = numMovies;
-    printf("%d", movies_count);
     // Load reservation data from file.
     int reservationCount = 0;
     if(loadReservationFromFile(reserve, &reservationCount) != 0)
