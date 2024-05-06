@@ -38,11 +38,17 @@ struct reservation
 
 struct reservation reserve[100];
 
-// For file i/o movies.
+// For file i/o
+//For users
+void saveUsersToFile();
+void loadUsersFromFile();
+
+//For movies
 void initializeMoviesFile();
 int saveMoviesToFile(struct movie[], int);
 int loadMoviesFromFile(struct movie[], int *);
 
+// For reservation
 int saveReservationToFile(struct reservation[], int);
 int loadReservationFromFile(struct reservation[], int *);
 
@@ -72,6 +78,9 @@ int admin_login();
 // Main Function
 int main()
 {
+    // Load users data from file.
+    loadUsersFromFile();
+
     // Initialize movies file with default data if it doesn't exist
     FILE *file = fopen("movies.txt", "r");
     if (file == NULL) {
@@ -93,7 +102,7 @@ int main()
     int reservationCount = 0;
     if(loadReservationFromFile(reserve, &reservationCount) != 0)
     {
-        printf("\tThere are not previous reservations.\n");
+        printf("\tThere are no previous reservations.\n");
     }
     reservation_count = reservationCount;
 
@@ -131,28 +140,6 @@ int main()
 // Prashan Rai.
 
 #include "login.c"
-
-int admin_login()
-{
-    pattern();
-    char username[10], password[10];
-    printf("\tWELCOME TO ADMIN LOGIN PAGE\n\n");
-    printf("\tEnter your username: \t");
-    scanf("%s", username);
-    printf("\n\tEnter your password: \t");
-    scanf("%s", password);
-    if ((strcmp(username, admin_username) == 0) && (strcmp(password, admin_password)) == 0)
-    {
-        printf("\n\tYou are logged in successfully!!!\n");
-        pattern();
-        admin_interface();
-    }
-    else {
-        printf("\n\tIncorrect password and/or username.Please try again");
-        pattern();
-        admin_login();
-    }
-}
 
 // For admin's side of things
 #include "admin.c"

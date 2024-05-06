@@ -1,6 +1,29 @@
 //For admin part of things.
 //Snehaa Completion part.
 
+int admin_login()
+{
+    pattern();
+    char username[10], password[10];
+    printf("\tWELCOME TO ADMIN LOGIN PAGE\n\n");
+    printf("\tEnter your username: \t");
+    scanf("%s", username);
+    printf("\n\tEnter your password: \t");
+    scanf("%s", password);
+    if ((strcmp(username, admin_username) == 0) && (strcmp(password, admin_password)) == 0)
+    {
+        printf("\n\tYou are logged in successfully!!!\n");
+        pattern();
+        admin_interface();
+    }
+    else {
+        printf("\n\tIncorrect password and/or username.Please try again");
+        pattern();
+        admin_login();
+    }
+}
+
+
 int admin_interface()
 {
     pattern();

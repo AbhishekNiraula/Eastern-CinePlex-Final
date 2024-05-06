@@ -80,7 +80,7 @@ int registerUser()
     userCount++;
     saveUsersToFile();
     printf("\tUSER REGISTERED SUCCESSFULLY.\n");
-    main();
+    user_interface(username);
     return 1;
 }
 

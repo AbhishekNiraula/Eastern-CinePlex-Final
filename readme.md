@@ -24,10 +24,10 @@ The project allows users to register with their username, password, and phone nu
 - Download all the files in one folder it must include `extra.h`, `main.c`, `users.txt`, `user.c`, `login.c`, `admin.c` file.
 - Run `gcc main.c -o main` or Build `main.c` file.
 - Run `./main` or execute `main.c` file.
-- `admin-interface` access is hardcoded and its credentials are:
+- `admin-interface` is hardcoded and can be accessed through:
     - Username: `Abhishek`
     - Password: `pass`
-  
+
 
 ## Additional Info:
 - Previously, when the project was presented in-front of our respected teacher there was a big loophole with the project i.e on exiting the program with `CTRL + C` all of the changed data would be flushed except for users data which was actually saved with file handeling.
@@ -35,10 +35,3 @@ The project allows users to register with their username, password, and phone nu
 - But, now with updated code all of the data that are changed will be intact in three files `reserve.txt`, `movies.txt` and `users.txt`
 and loaded as user interacts with the program.
 - If by any case there is issue with executing `main.exe` you can delete it and rerun the program. If there is issue with files the files can just be deleted and they will be created again by the program itself.
-
-## Contact Us and Licensing:
-If any passionate contributor wants to add new functionality to code they can freely add things to the project. Anybody can use this project as an inspiration and means to learn C programming language.
-  - Let us know about the changes and your experience with this project at: abhisekniraula321@gmail.com
-
-### Happy Coding!
-     
