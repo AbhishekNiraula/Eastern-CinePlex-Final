@@ -122,7 +122,13 @@ int edit_movies()
     scanf(" %[^\n]s", film[n - 1].genre);
     printf("\n\tDirectors: \t");
     scanf(" %[^\n]s", film[n - 1].director);
+    printf("\n\tNumber of seats for movie: \t");
+    scanf(" %[^\n]s", &film[n - 1].num_seats);
     printf("\tData taken successfully!!!");
+    for (int i = 0; i < film[n-1].num_seats; i++)
+    {
+        film[n-1].seats[i] = 0;
+    }
 
     // Saving edited file data.
     if (saveMoviesToFile(film, movies_count) != 0)
