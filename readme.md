@@ -35,3 +35,4 @@ The project allows users to register with their username, password, and phone nu
 - But, now with updated code all of the data that are changed will be intact in three files `reserve.txt`, `movies.txt` and `users.txt`
 and loaded as user interacts with the program.
 - If by any case there is issue with executing `main.exe` you can delete it and rerun the program. If there is issue with files the files can just be deleted and they will be created again by the program itself.
+- The program is divided into multiple files, and compiles ultimately through `main.exe` file. VS Code might not recognize variables in secondary files defined elsewhere as global variables. For this issue, under `quick-fix` option you can `Disable error squiggles`.
